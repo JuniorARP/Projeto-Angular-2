@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './auth.service';
 import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 
 @NgModule({
@@ -16,19 +17,19 @@ import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.componen
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp({
-      apiKey: 'AIzaSyDSFnaj5Q77boaxucltF_NY-ax_4X5yutI',
-      authDomain: 'todolist-65e04.firebaseapp.com',
-      databaseURL: 'https://todolist-65e04-default-rtdb.firebaseio.com',
-      projectId: 'todolist-65e04',
-      storageBucket: 'todolist-65e04.appspot.com',
-      messagingSenderId: '104538272650',
-      appId: '1:104538272650:web:242b2d41ac54f7ff338e73',
+      apiKey: 'YOUR_API_KEY',
+      authDomain: 'YOUR_AUTH_DOMAIN',
+      databaseURL: 'YOUR_DATABASE_URL',
+      projectId: 'YOUR_PROJECT_ID',
+      storageBucket: 'YOUR_STORAGE_BUCKET',
+      messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+      appId: 'YOUR_APP_ID',
     }),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
-  declarations: [RootComponent,PomodoroTimerComponent],
-  bootstrap: [RootComponent, PomodoroTimerComponent],
+  declarations: [RootComponent, PomodoroTimerComponent,TodoListComponent],
+  bootstrap: [RootComponent],
   providers: [AuthService],
 })
 export class AppModule {}
