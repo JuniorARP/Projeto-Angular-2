@@ -1,7 +1,9 @@
 <div id="btn-div2">
-  <button (click)="toggleContainerTodoList()">Todo-List</button>
+  <button (click)="toggleContainerTodoList()" class="btn btn-primary">
+    Todo-List
+  </button>
 </div>
-<div class="container" [hidden]="!isContainerVisible">
+<div class="container p-4 col-12 col-md-8 col-lg-6" [hidden]="!isContainerVisible">
   <h1>My list of tasks</h1>
   <div>
     <div>Task</div>
@@ -90,10 +92,7 @@
       <div class="card-footer text-muted d-flex justify-content-between">
         <div>Aqui deveria ir a data</div>
         <div>
-          <button
-            (click)="deleteItem(item.key)"
-            class="btn btn-outline-danger"
-          >
+          <button (click)="deleteItem(item.key)" class="btn btn-outline-danger">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
